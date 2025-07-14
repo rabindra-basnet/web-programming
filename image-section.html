@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            width: 80%;
+            height: 80%;
+            background-color: rgb(136, 48, 48);
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+            border-radius: 20px;
+        }
+
+        .card {
+            min-height: 20px;
+            min-width: 20px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 45%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fefefe;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+
+        .card p {
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <a href="">
+                <img src="/images/dog.png" alt="Image 1" />
+            </a>
+            <p>Explore vibrant horizons where creativity meets technology, unlocking new possibilities and empowering
+                every curious mind to innovate, collaborate, and thrive within a dynamic landscape shaped by
+                imagination, passion, and discovery.</p>
+        </div>
+        <div class="card">
+            <img src="/images/tower.png" alt="Image 2" />
+            <p>Explore vibrant horizons where creativity meets technology, unlocking new possibilities and empowering
+                every curious mind to innovate, collaborate, and thrive within a dynamic landscape shaped by
+                imagination, passion, and discovery.</p>
+        </div>
+        <div class="card">
+            <img src="/images/tower.png" alt="Image 3" />
+            <p>Explore vibrant horizons where creativity meets technology, unlocking new possibilities and empowering
+                every curious mind to innovate, collaborate, and thrive within a dynamic landscape shaped by
+                imagination, passion, and discovery.</p>
+        </div>
+        <div class="card">
+            <img src="/images/tower.png" alt="Image 4" />
+            <p>Explore vibrant horizons where creativity meets technology, unlocking new possibilities and empowering
+                every curious mind to innovate, collaborate, and thrive within a dynamic landscape shaped by
+                imagination, passion, and discovery.</p>
+        </div>
+    </div>
+</body>
+
+</html>

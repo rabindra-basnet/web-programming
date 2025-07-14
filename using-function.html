@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hello {
+        padding: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <script>
+        function hello() {
+            const add_text = document.getElementById('hello2');
+            add_text.style.fontSize = "24px";
+            add_text.style.color = "#333";
+            add_text.style.fontFamily = "Arial, sans-serif";
+
+            add_text.innerHTML = " Please find more information here: ";
+
+            const add_link = document.createElement('a');
+            add_link.href = "https://google.com";
+            add_link.textContent = "Visit Google";
+            add_link.target = "_blank";
+            add_link.style.color = "#1a73e8";
+            add_link.style.textDecoration = "underline";
+            add_link.style.marginLeft = "8px";
+
+            add_text.appendChild(add_link);
+        }
+
+    </script>
+    <button class="hello" type="button" onclick="hello()">Click Me!</button>
+    <p id="hello2"></p>
+</body>
+
+</html>
