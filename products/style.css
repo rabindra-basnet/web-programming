@@ -85,3 +85,21 @@ header h1 {
 .back-link:hover {
   background-color: #c2185b;
 }
+
+
+.buy-now-btn {
+  background-color: #ff4c3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 15px; /* spacing between link and button */
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #e04334;
+}
