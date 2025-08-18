@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Crafts - Handmade Treasures</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#" onclick="showPage('home')">
+                <i class="fas fa-palette me-2"></i>Artisan Crafts
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('products')">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('about')">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('register')">Register</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart me-1"></i>Cart (0)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page-content">
+        <section class="bg-dark text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center;">
+            <div class="container text-center py-5">
+                <h1 class="display-4 fw-bold mb-4">Discover Unique Handcrafted Treasures</h1>
+                <p class="lead mb-4">Each piece tells a story, crafted with passion by skilled artisans from around the world</p>
+                <button class="btn btn-primary btn-lg" onclick="showPage('products')">
+                    <i class="fas fa-shopping-bag me-2"></i>Shop Now
+                </button>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Featured Products</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary">Jewelry</span>
+                                <h5 class="card-title mt-2">Handcrafted Silver Ring</h5>
+                                <p class="card-text">Elegant sterling silver ring with intricate Celtic patterns.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-danger fw-bold fs-5">$89.99</span>
+                                    <button class="btn btn-primary btn-sm" onclick="showProductDetail('silver-ring')">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary">Fashion</span>
+                                <h5 class="card-title mt-2">Woven Straw Hat</h5>
+                                <p class="card-text">Traditional hand-woven hat perfect for summer adventures.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-danger fw-bold fs-5">$45.99</span>
+                                    <button class="btn btn-primary btn-sm" onclick="showProductDetail('straw-hat')">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="bg-image" style="background-image: url('https://nestasia.in/cdn/shop/files/Blossom-Charm-Set-Of-4-Bowls-And-Spoons-400ml_13.jpg?v=1747977783&width=246'); height: 250px; background-size: cover; background-position: center;"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary">Kitchen</span>
+                                <h5 class="card-title mt-2">Ceramic Bowl Set</h5>
+                                <p class="card-text">Beautiful glazed ceramic bowls, perfect for serving.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-danger fw-bold fs-5">$67.99</span>
+                                    <button class="btn btn-primary btn-sm" onclick="showProductDetail('ceramic-bowls')">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-hands text-primary fs-1 mb-3"></i>
+                        <h4>Handcrafted Quality</h4>
+                        <p>Every item is carefully handcrafted by skilled artisans using traditional techniques.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-shipping-fast text-primary fs-1 mb-3"></i>
+                        <h4>Fast Shipping</h4>
+                        <p>We ensure your treasures reach you safely with our expedited shipping options.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-heart text-primary fs-1 mb-3"></i>
+                        <h4>Made with Love</h4>
+                        <p>Each piece carries the passion and dedication of the artisan who created it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Products Page -->
+    <div id="products-page" class="page-content d-none" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><i class="fas fa-filter me-2"></i>Filters</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6>Category</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="jewelry">
+                                <label class="form-check-label" for="jewelry">Jewelry</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="pottery">
+                                <label class="form-check-label" for="pottery">Pottery</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="textiles">
+                                <label class="form-check-label" for="textiles">Textiles</label>
+                            </div>
+                            <hr>
+                            <h6>Price Range</h6>
+                            <input type="range" class="form-range" min="0" max="200" id="priceRange">
+                            <div class="d-flex justify-content-between">
+                                <small>$0</small>
+                                <small>$200+</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>All Products</h2>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Sort by
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                                <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                                <li><a class="dropdown-item" href="#">Newest First</a></li>
+                                <li><a class="dropdown-item" href="#">Most Popular</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Jewelry</span>
+                                    <h5 class="card-title mt-2">Handcrafted Silver Ring</h5>
+                                    <p class="card-text">Elegant sterling silver ring with intricate Celtic patterns, handmade by master craftsmen.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$89.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('silver-ring')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Fashion</span>
+                                    <h5 class="card-title mt-2">Woven Straw Hat</h5>
+                                    <p class="card-text">Traditional hand-woven straw hat, perfect for summer adventures and outdoor activities.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$45.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('straw-hat')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://nestasia.in/cdn/shop/files/Blossom-Charm-Set-Of-4-Bowls-And-Spoons-400ml_13.jpg?v=1747977783&width=246'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Kitchen</span>
+                                    <h5 class="card-title mt-2">Ceramic Bowl Set</h5>
+                                    <p class="card-text">Beautiful set of glazed ceramic bowls, perfect for serving and dining in style.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$67.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('ceramic-bowls')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Art</span>
+                                    <h5 class="card-title mt-2">Dreamcatcher</h5>
+                                    <p class="card-text">Authentic Native American dreamcatcher with natural feathers and intricate beadwork.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$34.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('dreamcatcher')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCKLLchnaUIOgC2laGQmnKXY6RCobdIghMA&s'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Fashion</span>
+                                    <h5 class="card-title mt-2">Hand-dyed Scarf</h5>
+                                    <p class="card-text">Luxurious silk scarf with unique hand-dyed patterns using natural plant-based dyes.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$78.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('silk-scarf')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); height: 250px; background-size: cover; background-position: center;"></div>
+                                <div class="card-body">
+                                    <span class="badge bg-primary">Home</span>
+                                    <h5 class="card-title mt-2">Wooden Planter</h5>
+                                    <p class="card-text">Handcrafted wooden planter made from reclaimed wood, perfect for indoor plants.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-danger fw-bold fs-5">$52.99</span>
+                                        <button class="btn btn-primary btn-sm" onclick="showProductDetail('wooden-planter')">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Products pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="page-content d-none" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h1>About Artisan Crafts</h1>
+                        <p class="lead">Connecting artisans with craft lovers worldwide</p>
+                    </div>
+                    <div class="card shadow-sm border-0 mb-5">
+                        <div class="card-body p-5">
+                            <h3 class="mb-4">Our Story</h3>
+                            <p class="mb-4">
+                                Founded in 2020, Artisan Crafts began as a small passion project to support traditional craftspeople 
+                                and bring their beautiful handmade creations to a global audience. We believe that every handcrafted 
+                                item tells a unique story and carries the soul of its creator.
+                            </p>
+                            <p class="mb-4">
+                                Our platform connects skilled artisans from around the world with people who appreciate quality, 
+                                authenticity, and the irreplaceable value of handmade goods. From jewelry and pottery to textiles 
+                                and home décor, each piece in our collection is carefully curated to ensure the highest standards 
+                                of craftsmanship.
+                            </p>
+                            <p>
+                                We're committed to fair trade practices, ensuring that artisans receive fair compensation for 
+                                their work while preserving traditional crafting techniques for future generations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-globe-americas text-primary fs-1 mb-3"></i>
+                                    <h5>Global Network</h5>
+                                    <p>Working with over 500 artisans from 30 countries worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-leaf text-success fs-1 mb-3"></i>
+                                    <h5>Sustainable</h5>
+                                    <p>Committed to eco-friendly practices and sustainable materials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Page -->
+    <div id="register-page" class="page-content d-none" style="padding-top: 100px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-5">
+                        <h1>Join Artisan Crafts</h1>
+                        <p class="lead">Register to buy or sell unique handcrafted treasures</p>
+                    </div>
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Create Your Account</h5>
+                            <form id="register-form">
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                    <div class="invalid-feedback">Please enter your full name.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required minlength="8">
+                                    <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userType" class="form-label">User Type</label>
+                                    <select class="form-select" id="userType" name="userType" required>
+                                        <option value="" disabled selected>Select user type</option>
+                                        <option value="customer">Customer</option>
+                                        <option value="artisan">Artisan</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a user type.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Interests (select at least one)</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="jewelryInterest" name="interests" value="Jewelry">
+                                        <label class="form-check-label" for="jewelryInterest">Jewelry</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="potteryInterest" name="interests" value="Pottery">
+                                        <label class="form-check-label" for="potteryInterest">Pottery</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="textilesInterest" name="interests" value="Textiles">
+                                        <label class="form-check-label" for="textilesInterest">Textiles</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="homeDecorInterest" name="interests" value="Home Decor">
+                                        <label class="form-check-label" for="homeDecorInterest">Home Decor</label>
+                                    </div>
+                                    <div class="invalid-feedback">Please select at least one interest.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bio" class="form-label">Bio (Optional)</label>
+                                    <textarea class="form-control" id="bio" name="bio" rows="4" placeholder="Tell us about yourself or your craft"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-user-plus me-2"></i>Register
+                                </button>
+                                <button type="button" class="btn btn-secondary w-100 mt-2" onclick="document.getElementById('register-form').reset()">
+                                    <i class="fas fa-undo me-2"></i>Clear Form
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-image mb-3" id="modalImage" style="height: 400px; background-size: cover; background-position: center;">
+                                <i class="fas fa-ring"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="modalCategory" class="badge bg-primary mb-2">Category</div>
+                            <h4 id="modalProductTitle">Product Name</h4>
+                            <div class="mb-3">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <small class="text-muted ms-2">(24 reviews)</small>
+                            </div>
+                            <div class="text-danger fs-3 mb-3" id="modalPrice">$89.99</div>
+                            <p id="modalDescription" class="mb-4">Product description goes here...</p>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity()">-</button>
+                                    <input type="text" class="form-control text-center" value="1" id="quantity" readonly>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary btn-lg" onclick="addToCart()">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="fas fa-heart me-2"></i>Add to Wishlist
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3"><i class="fas fa-palette me-2"></i>Artisan Crafts</h5>
+                    <p>Connecting skilled artisans with craft lovers worldwide. Every piece tells a unique story.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" onclick="showPage('home')">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" onclick="showPage('products')">Products</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" onclick="showPage('about')">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" onclick="showPage('register')">Register</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Jewelry</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Pottery</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Textiles</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Home Décor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <small>123 Craft Street, Creative City</small>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        <small>+1 (555) 123-CRAFT</small>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <small>hello@artisancrafts.com</small>
+                    </div>
+                    <h6>Newsletter</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Artisan Crafts. All rights reserved. | Handcrafted with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Product data
+        const products = {
+            'silver-ring': {
+                title: 'Handcrafted Silver Ring',
+                category: 'Jewelry',
+                price: '$89.99',
+                image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                description: 'This exquisite sterling silver ring features intricate Celtic patterns that have been carefully handcrafted by skilled artisans.'
+            },
+            'straw-hat': {
+                title: 'Woven Straw Hat',
+                category: 'Fashion',
+                price: '$45.99',
+                image: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                description: 'Traditional hand-woven straw hat made from natural materials.'
+            },
+            'ceramic-bowls': {
+                title: 'Ceramic Bowl Set',
+                category: 'Kitchen',
+                price: '$67.99',
+                image: 'https://nestasia.in/cdn/shop/files/Blossom-Charm-Set-Of-4-Bowls-And-Spoons-400ml_13.jpg?v=1747977783&width=246',
+                description: 'Beautiful set of glazed ceramic bowls, perfect for serving salads, soups, or decorative purposes.'
+            },
+            'dreamcatcher': {
+                title: 'Dreamcatcher',
+                category: 'Art',
+                price: '$34.99',
+                image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                description: 'Authentic Native American dreamcatcher handmade with natural materials.'
+            },
+            'silk-scarf': {
+                title: 'Hand-dyed Silk Scarf',
+                category: 'Fashion',
+                price: '$78.99',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCKLLchnaUIOgC2laGQmnKXY6RCobdIghMA&s',
+                description: 'Luxurious 100% silk scarf featuring unique hand-dyed patterns.'
+            },
+            'wooden-planter': {
+                title: 'Wooden Planter',
+                category: 'Home',
+                price: '$52.99',
+                image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+                description: 'Handcrafted wooden planter made from reclaimed wood.'
+            }
+        };
+
+        // Navigation functionality
+        function showPage(pageName) {
+            const pages = ['home-page', 'products-page', 'about-page', 'register-page'];
+            pages.forEach(page => {
+                document.getElementById(page).classList.add('d-none');
+            });
+            document.getElementById(pageName + '-page').classList.remove('d-none');
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Product detail modal functionality
+        function showProductDetail(productId) {
+            const product = products[productId];
+            if (product) {
+                document.getElementById('modalTitle').textContent = product.title;
+                document.getElementById('modalProductTitle').textContent = product.title;
+                document.getElementById('modalCategory').textContent = product.category;
+                document.getElementById('modalPrice').textContent = product.price;
+                document.getElementById('modalDescription').textContent = product.description;
+                const modalImage = document.getElementById('modalImage');
+                modalImage.style.backgroundImage = `url('${product.image}')`;
+                modalImage.innerHTML = '';
+                document.getElementById('quantity').value = '1';
+                const modal = new bootstrap.Modal(document.getElementById('productModal'));
+                modal.show();
+            }
+        }
+
+        // Quantity controls
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+
+        // Cart functionality
+        let cartCount = 0;
+        function addToCart() {
+            cartCount++;
+            const cartElement = document.querySelector('.nav-link:last-child');
+            cartElement.innerHTML = `<i class="fas fa-shopping-cart me-1"></i>Cart (${cartCount})`;
+            alert('Product added to cart successfully!');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+            modal.hide();
+        }
+
+        // Registration form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const registerForm = document.getElementById('register-form');
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Get form elements
+                    const fullName = document.getElementById('fullName');
+                    const email = document.getElementById('email');
+                    const password = document.getElementById('password');
+                    const userType = document.getElementById('userType');
+                    const interests = document.querySelectorAll('input[name="interests"]:checked');
+                    const bio = document.getElementById('bio');
+
+                    // Reset validation states
+                    [fullName, email, password, userType].forEach(field => {
+                        field.classList.remove('is-invalid');
+                        field.nextElementSibling.textContent = field.nextElementSibling.getAttribute('data-default-message') || field.nextElementSibling.textContent;
+                    });
+                    const interestsFeedback = document.querySelector('.mb-3 .invalid-feedback');
+                    interestsFeedback.style.display = 'none';
+
+                    // Validation
+                    let isValid = true;
+                    if (!fullName.value.trim()) {
+                        fullName.classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        email.classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    if (password.value.length < 8) {
+                        password.classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    if (!userType.value) {
+                        userType.classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    if (interests.length === 0) {
+                        interestsFeedback.style.display = 'block';
+                        isValid = false;
+                    }
+
+                    if (!isValid) {
+                        return;
+                    }
+
+                    // Check if email already exists
+                    const users = JSON.parse(localStorage.getItem('users') || '[]');
+                    if (users.some(user => user.email === email.value)) {
+                        email.classList.add('is-invalid');
+                        email.nextElementSibling.textContent = 'This email is already registered.';
+                        return;
+                    }
+
+                    // Store user data
+                    const user = {
+                        id: Date.now(), // Unique ID for each registration
+                        fullName: fullName.value.trim(),
+                        email: email.value,
+                        userType: userType.value,
+                        interests: Array.from(interests).map(interest => interest.value),
+                        bio: bio.value.trim(),
+                        registeredAt: new Date().toISOString()
+                    };
+                    users.push(user);
+                    localStorage.setItem('users', JSON.stringify(users));
+
+                    // Show success message
+                    alert(`Registration #${users.length} successful, ${fullName.value}! Welcome to Artisan Crafts as a ${userType.value}.`);
+
+                    // Clear form for next registration
+                    registerForm.reset();
+                });
+
+                // Store default error messages
+                [fullName, email, password, userType].forEach(field => {
+                    field.nextElementSibling.setAttribute('data-default-message', field.nextElementSibling.textContent);
+                });
+            }
+
+            // Newsletter subscription handler
+            const newsletterButton = document.querySelector('.footer .btn-primary');
+            if (newsletterButton) {
+                newsletterButton.addEventListener('click', function() {
+                    const emailInput = this.previousElementSibling;
+                    if (emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+
+            // Initialize - show home page
+            showPage('home');
+        });
+
+        // Smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>
